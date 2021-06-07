@@ -2,9 +2,10 @@ import React from 'react';
 
 class Footer extends React.Component{
     render(){
+        const myName = 'Made by Mahmoud Al-dinah'
         return (
             <footer>
-                this is the footer
+              <span>{myName}</span>
             </footer>
         )
     }

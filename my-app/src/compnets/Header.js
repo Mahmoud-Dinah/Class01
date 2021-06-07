@@ -3,9 +3,8 @@ import React from 'react';
 class Header extends React.Component {
     render () {
         return (
-            <header> Welcome</header>
+            <h1> Welcome To Horn Gallery</h1>
         )
-
     }
 }
 
