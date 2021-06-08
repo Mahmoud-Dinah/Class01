@@ -1,3 +1,7 @@
+# This application created to displays images and information of horned animals. This application will allow you to filter the images by number of horns and chose your favorite image
+
+# technologies used: React,Bootstrap,Nodejs
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +72,31 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# Lab 02 information
+-------------------------
+
+Lab 02 information :
+
+Number and name of feature:  #1: Display images
+
+Estimate of time needed to complete: 60 min.
+
+Start time: 2 PM
+
+Finish time: 2:35 PM
+
+Actual time needed to complete: 35 min
+
+------------------
+
+Number and name of feature: #2: Allow users to vote for their favorite beast
+
+Estimate of time needed to complete: 2 hour.
+
+Start time: 3:00 AM
+
+Finish time: 5:20 Am
+
+Actual time needed to complete: 2 hour, 20 min
