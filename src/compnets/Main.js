@@ -1,8 +1,7 @@
 import React from 'react';
 import HornedBeast from './HornedBeast';
 import HornedData from './data.json';
-import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Card'
+
 
 class Main extends React.Component {
     render () {
