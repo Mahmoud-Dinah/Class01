@@ -146,7 +146,6 @@ class Main extends React.Component {
         }
       ]
 
-      
         return (
             <main>
           <div>
@@ -157,11 +156,9 @@ class Main extends React.Component {
                             title={beast.title}
                             img={beast.image_url}
                             description={beast.description}
-                        />
-
+                       />
                 )
             })
-
 
         } </div>
            </main>

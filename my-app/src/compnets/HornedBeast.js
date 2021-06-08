@@ -1,20 +1,33 @@
 import React from 'react';
 
 class HornedBeast extends React.Component {
-    render () {
 
-        const imageClick = () => {
-            console.log('Click');
-          } 
+    constructor(props) {
+        super(props);
+        this.state = {
+            startCounter: 0,
+        }
+    }
+
+    imageClick = () => {
+        let incCount = this.state.startCounter;
+        this.setState({
+            startCounter: incCount + 1,
+        })
+    }
+
+    render() {
         return (
-            <main>
-                <div>
-            <h2>{this.props.title}</h2>
-            <img src={this.props.img} alt={this.props.title}  onClick={() => imageClick()}/>
-           <p> {this.props.description} </p>
 
-           </div>
-           </main>
+            <div>
+                <h2>{this.props.title}</h2>
+                <img src={this.props.img} alt={this.props.title} onClick={this.imageClick} />
+                <p> {this.props.description} </p>
+                <p>❤️{this.state.startCounter}</p>
+              
+
+            </div>
+
         )
     }
 }
