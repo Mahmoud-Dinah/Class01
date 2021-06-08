@@ -1,4 +1,8 @@
 import React from 'react';
+import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Card'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 class HornedBeast extends React.Component {
 
@@ -18,16 +22,27 @@ class HornedBeast extends React.Component {
 
     render() {
         return (
-
             <div>
-                <h2>{this.props.title}</h2>
-                <img src={this.props.img} alt={this.props.title} onClick={this.imageClick} />
-                <p> {this.props.description} </p>
-                <p>❤️{this.state.startCounter}</p>
-              
 
+                <Row xs={1} md={2} className="g-4">
+                    {Array.from({ length: 2 }).map((_, idx) => (
+                        <Col>
+
+                            <Card border="danger" style={{ width: '18rem', color: 'black', backgroundColor: 'gray' }}>
+                                <Card.Img variant="top" src={this.props.img} alt={this.props.title} onClick={this.imageClick} />
+                                <Card.Body>
+                                    <Card.Title>{this.props.title}</Card.Title>
+                                    <Card.Text>
+                                        {this.props.description}
+                                      ❤️{this.state.startCounter}
+                                    </Card.Text>
+                                    <Button variant="primary">Go somewhere</Button>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                    ))}
+                </Row>
             </div>
-
         )
     }
 }

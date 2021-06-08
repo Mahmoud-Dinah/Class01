@@ -2,6 +2,7 @@ import React from 'react';
 import HornedBeast from './HornedBeast';
 import HornedData from './data.json';
 
+
 class Main extends React.Component {
     render () {
         return (
@@ -14,11 +15,15 @@ class Main extends React.Component {
                             title={beast.title}
                             img={beast.image_url}
                             description={beast.description}
+                            
                        />
                 )
             })
+        } 
 
-        } </div>
+
+        
+        </div>
            </main>
         )
     }
