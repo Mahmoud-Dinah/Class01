@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './compnets/Header';
 import Main from './compnets/Main';
 import Footer from './compnets/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
