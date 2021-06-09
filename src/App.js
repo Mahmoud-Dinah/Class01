@@ -5,6 +5,7 @@ import HornedData from './compnets/data.json';
 import SelectedBeast from './compnets/SelectedBeast';
 import Footer from './compnets/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import SelectedForm from './compnets/SelectedForm'
 
 
 
@@ -37,7 +38,15 @@ class App extends React.Component {
     return (
       <div style={{ textAlign: 'center', }}>
 
+
+
+
         <Header />
+
+        <SelectedForm
+      
+
+      />
         <Main
           HornedData={HornedData}
           showModal={this.showModal}
@@ -54,7 +63,7 @@ class App extends React.Component {
         />
         <Footer />
 
-
+     
 
       </div>
     )
