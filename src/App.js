@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './compnets/Header';
 import Main from './compnets/Main';
+import HornedData from './data.json';
 import Footer from './compnets/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
