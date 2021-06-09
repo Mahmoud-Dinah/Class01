@@ -10,6 +10,7 @@ class HornedBeast extends React.Component {
         super(props);
         this.state = {
             startCounter: 0,
+            
         }
     }
 
@@ -20,6 +21,8 @@ class HornedBeast extends React.Component {
         })
     }
 
+  
+
     render() {
         return (
             <div>
@@ -28,8 +31,15 @@ class HornedBeast extends React.Component {
                     {Array.from({ length: 2 }).map((_, idx) => (
                         <Col>
 
-                            <Card border="danger" style={{ width: '18rem', color: 'black', backgroundColor: 'gray' }}>
-                                <Card.Img variant="top" src={this.props.img} alt={this.props.title} onClick={this.imageClick} />
+                            <Card border="danger" style={{ width: '18rem', color: 'white', backgroundColor: 'black' }}>
+                                <Card.Img variant="top"  alt={this.props.title} onClick={()=> {
+                                this.imageClick();
+                                this.props.showModal(
+                                    this.props.title,
+                                    this.props.img,
+                                    this.props.description
+                                )   
+                                }} src={this.props.img} />
                                 <Card.Body>
                                     <Card.Title>{this.props.title}</Card.Title>
                                     <Card.Text>
