@@ -1,8 +1,9 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Card'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 class HornedBeast extends React.Component {
 
@@ -10,7 +11,7 @@ class HornedBeast extends React.Component {
         super(props);
         this.state = {
             startCounter: 0,
-            
+
         }
     }
 
@@ -21,24 +22,26 @@ class HornedBeast extends React.Component {
         })
     }
 
-  
+
 
     render() {
         return (
             <div>
 
-                <Row xs={1} md={2} className="g-4">
-                    {Array.from({ length: 2 }).map((_, idx) => (
-                        <Col>
 
+                {Array.from({ length: 1 }).map((_, idx) => (
+
+                    <Container>
+                        <Row className="justify-content-md-center">
+                        <Col xs lg="4">
                             <Card border="danger" style={{ width: '18rem', color: 'white', backgroundColor: 'black' }}>
-                                <Card.Img variant="top"  alt={this.props.title} onClick={()=> {
-                                this.imageClick();
-                                this.props.showModal(
-                                    this.props.title,
-                                    this.props.img,
-                                    this.props.description
-                                )   
+                                <Card.Img variant="top" alt={this.props.title} onClick={() => {
+                                    this.imageClick();
+                                    this.props.showModal(
+                                        this.props.title,
+                                        this.props.img,
+                                        this.props.description
+                                    )
                                 }} src={this.props.img} />
                                 <Card.Body>
                                     <Card.Title>{this.props.title}</Card.Title>
@@ -49,9 +52,13 @@ class HornedBeast extends React.Component {
                                     <Button variant="primary">Go somewhere</Button>
                                 </Card.Body>
                             </Card>
-                        </Col>
-                    ))}
-                </Row>
+                            </Col>
+
+                        </Row>
+
+                    </Container>
+                ))}
+
             </div>
         )
     }
