@@ -23,7 +23,7 @@ export class SelectedBeast extends Component {
         {this.props.description}               
           
         </Modal.Footer>
-        <Button variant="primary" onClick={this.props.showModal}>
+        <Button variant="primary" onClick={this.props.handelClose}>
           Close
           </Button>
       </Modal>

@@ -33,6 +33,11 @@ class App extends React.Component {
     })
    
   }
+  handelClose = () => {
+    this.setState ({
+      show: false
+    })
+  }
 
   render() {
     return (
@@ -55,11 +60,12 @@ class App extends React.Component {
 
         <SelectedBeast 
         show={this.state.show}
-        notShow={this.state.notShow}
+        
         title={this.state.selectedBeastTitle}
         img={this.state.selectedBeastImg}
         description={this.state.selectedBeastDes}
         showModal={this.showModal}
+        handelClose  = {this.handelClose}
         />
         <Footer />
 
