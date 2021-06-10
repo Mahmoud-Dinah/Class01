@@ -10,7 +10,7 @@ class Main extends React.Component {
         return (
             <main>
           <div>
-          <CardColumns>
+          <CardColumns  >
             {
                 this.props.HornedData.map((beast) => {
                     return (

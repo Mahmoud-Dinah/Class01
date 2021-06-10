@@ -5,7 +5,7 @@ class Footer extends React.Component{
         const myName = 'Made by Mahmoud Al-dinah'
         return (
             <footer>
-              <span>{myName}</span>
+              <span style={{textAlign:'center' , backgroundColor: 'black' , width: '100%' , color: 'white' }}>{myName}</span>
             </footer>
         )
     }
