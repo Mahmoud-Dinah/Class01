@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Card'
+
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -33,8 +33,8 @@ class HornedBeast extends React.Component {
 
                     <Container>
                         <Row className="justify-content-md-center">
-                        <Col xs lg="4">
-                            <Card border="danger" style={{ width: '18rem', color: 'white', backgroundColor: 'black' }}>
+                        <Col xs lg="8">
+                            <Card bg='dark' text= 'warning' border="danger" style={{ width: '18rem', color: 'white' }}>
                                 <Card.Img variant="top" alt={this.props.title} onClick={() => {
                                     this.imageClick();
                                     this.props.showModal(
@@ -49,7 +49,7 @@ class HornedBeast extends React.Component {
                                         {this.props.description}
                                       ❤️{this.state.startCounter}
                                     </Card.Text>
-                                    <Button variant="primary">Go somewhere</Button>
+                                   
                                 </Card.Body>
                             </Card>
                             </Col>
