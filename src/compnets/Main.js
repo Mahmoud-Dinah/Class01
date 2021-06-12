@@ -11,7 +11,7 @@ class Main extends React.Component {
             <main>
           <div>
           <CardColumns  >
-            {
+            {/* {
                 this.props.HornedData.map((beast) => {
                     return (
                         <HornedBeast 
@@ -24,8 +24,36 @@ class Main extends React.Component {
                        />
                 )
             })
-        } 
+        }  */}
 
+{
+                    this.props.HornedData.map(beast => {
+
+                        if(this.props.numberOfHorns == 0){
+                            return <HornedBeast key={beast.title} 
+                            title={beast.title}
+                            img={beast.image_url}
+                            description={beast.description}
+                            showModal={this.props.showModal}
+                        
+                            setModalShow={() => this.props.showModal}
+                            showModal={this.props.showModal}
+                            />;
+                        }
+                        else if(this.props.numberOfHorns == beast.horns){
+                            return <HornedBeast key={beast.title} 
+                            title={beast.title}
+                            img={beast.image_url}
+                            description={beast.description}
+                            showModal={this.props.showModal}
+                        
+                            setModalShow={() => this.props.showModal}
+                            setModalContent={this.props.showModal}
+                            />
+                        }
+                    })
+                        
+                }   
 
 </CardColumns>
         </div>

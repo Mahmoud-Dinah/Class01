@@ -14,27 +14,41 @@ class App extends React.Component {
     super(props);
     this.state = {
       show: false,
-      selectedBeastTitle : '' ,
-      selectedBeastImg :'' ,
-      selectedBeastDes :  '' , 
- 
+      selectedBeastTitle: '',
+      selectedBeastImg: '',
+      selectedBeastDes: '',
+      numberOfHorns : 0,
+      selectedBeastsShow : false
+
     }
   }
-
-
-
-  showModal = (title , img, description) => {
-    console.log(title);
-    this.setState({ 
-    show: !this.state.show,
-    selectedBeastTitle : title ,
-      selectedBeastImg :img ,
-      selectedBeastDes :  description , 
+  setNumberOfHorns = (e) => {
+    e.preventDefault();
+    this.setState({
+      numberOfHorns : e.target.value
     })
-   
+    this.setSelectedShow();
+  }
+
+  setSelectedShow = () => {
+    this.setState({
+      selectedBeastsShow: true
+    })
+  }
+
+
+  showModal = (title, img, description) => {
+    console.log(title);
+    this.setState({
+      show: !this.state.show,
+      selectedBeastTitle: title,
+      selectedBeastImg: img,
+      selectedBeastDes: description,
+    })
+
   }
   handelClose = () => {
-    this.setState ({
+    this.setState({
       show: false
     })
   }
@@ -43,33 +57,30 @@ class App extends React.Component {
     return (
       <div style={{ textAlign: 'center', }}>
 
-
-
-
         <Header />
 
-        <SelectedForm
-      
+        <SelectedForm setNumberOfHorns={this.setNumberOfHorns} />
 
-      />
         <Main
           HornedData={HornedData}
           showModal={this.showModal}
-         
+          numberOfHorns={this.state.numberOfHorns}
+          selectedBeastsShow={this.state.selectedBeastsShow}
+
         />
 
-        <SelectedBeast 
-        show={this.state.show}
-        
-        title={this.state.selectedBeastTitle}
-        img={this.state.selectedBeastImg}
-        description={this.state.selectedBeastDes}
-        showModal={this.showModal}
-        handelClose  = {this.handelClose}
+        <SelectedBeast
+          show={this.state.show}
+
+          title={this.state.selectedBeastTitle}
+          img={this.state.selectedBeastImg}
+          description={this.state.selectedBeastDes}
+          showModal={this.showModal}
+          handelClose={this.handelClose}
         />
         <Footer />
 
-     
+
 
       </div>
     )
